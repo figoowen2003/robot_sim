@@ -1,0 +1,8 @@
+{
+    "ros.distro": "rolling",
+    "files.associations": {
+        "iosfwd": "cpp",
+        "fstream": "cpp",
+        "ostream": "cpp"
+    }
+}
