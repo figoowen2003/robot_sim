@@ -15,12 +15,6 @@ using namespace std;
 namespace fs = std::filesystem;
 
 int main(int argc, char *argv[]) {
-    // Get input arguments from user
-    vector<string> arguments;
-    for (int i = 0; i < argc; ++i) {
-        arguments.emplace_back(string(argv[i]));
-    }
-
     // Start node, forward command line arguments to ROS
     rclcpp::init(argc, argv);
 
@@ -51,7 +45,7 @@ int main(int argc, char *argv[]) {
     fs::path dir(package_share_directory);
     fs::path sdfFilePath = dir / fs::path("models") / fs::path("mobile_warehouse_robot") 
         / fs::path("model.sdf");
-    cout << "------>> robt_sdf = " << sdfFilePath << endl;
+    cout << "robt_sdf = " << sdfFilePath << endl;
     // Get the content of robot sdf file
     ifstream sdfFile(sdfFilePath);
     string line;
@@ -64,15 +58,23 @@ int main(int argc, char *argv[]) {
         cout << "======== open sdf failed ========" << endl;
     }  
 
-    // Set data for request
+    // Set data for request, argvs come from gazebo_world.launch.py
     auto request = std::make_shared<gazebo_msgs::srv::SpawnEntity::Request>();
-    request->name = argv[0];
-    cout << argv[0] << endl;
+    request->name = argv[1];
+    cout << argv[1] << endl;
     request->xml = string(buffer.str());
-    request->robot_namespace = string(argv[1]);
-    request->initial_pose.position.x = atof(argv[2]);
-    request->initial_pose.position.y = atof(argv[3]);
-    request->initial_pose.position.z = atof(argv[4]) ;
+    request->robot_namespace = string(argv[2]); // different from python 
+    cout << "argc = " << argc << endl;
+    cout << "argv[0] = " << argv[0] << endl;
+    cout << "argv[1] = " << argv[1] << endl;
+    cout << "argv[2] = " << argv[2] << endl;
+    cout << "argv[3] = " << argv[3] << endl;
+    cout << "argv[4] = " << argv[4] << endl;
+    cout << "argv[5] = " << argv[5] << endl;
+    cout << "argv[6] = " << argv[6] << endl;
+    request->initial_pose.position.x = atof(argv[3]);
+    request->initial_pose.position.y = atof(argv[4]);
+    request->initial_pose.position.z = atof(argv[5]) ;
 
     RCLCPP_INFO(node->get_logger(), "Sending service request to '/spawn_entity'");
     auto result = client->async_send_request(request);

@@ -60,6 +60,11 @@ def main():
     request.initial_pose.position.x = float(argv[2])
     request.initial_pose.position.y = float(argv[3])
     request.initial_pose.position.z = float(argv[4])
+    print(f"argv[0]={argv[0]}")
+    print(f"argv[1]={argv[1]}")
+    print(f"argv[2]={argv[2]}")
+    print(f"argv[3]={argv[3]}")
+    print(f"argv[4]={argv[4]}")
 
     node.get_logger().info("Sending service request to `/spawn_entity`")
     future = client.call_async(request)
