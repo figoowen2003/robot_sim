@@ -82,7 +82,7 @@ private:
         auto v = msg->linear.x;
     
         // Angular velocity around the robot's z axis
-        auto yaw_rate = msg->angular.z;       
+        auto yaw_rate = msg->angular.z;     
     }
 
     // void OnSensorMsg(const sensor_msgs::msg::LaserScan::SharedPtr _msg)

@@ -227,7 +227,7 @@ class Controller(Node):
       #self._logger.info("here is the eighth branch")
 
     elif self.left_dist < d and self.leftfront_dist > d and self.right_dist > d:
-      msg.angular.z = self.turning_speed_wf_fast
+      msg.angular.z = -self.turning_speed_wf_fast
       #self._logger.info("here is the nineth branch")
     elif self.left_dist > d and self.rightfront_dist > d and self.right_dist < d:
       msg.angular.z = self.turning_speed_wf_fast

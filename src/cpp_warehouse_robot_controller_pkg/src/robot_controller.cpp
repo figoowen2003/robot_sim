@@ -26,7 +26,7 @@ public:
 
         // Subscribe to sensor messages
         laser_sub_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "laser_scan", default_qos,
+            "/demo/laser/out", default_qos,
             std::bind(&RobotController::OnSensorMsg, this, _1));
 
         // This node publishes the desired linear and angular velocity of the 
@@ -83,45 +83,46 @@ private:
     // >d means no wall detected by that laser beam
     // <d means an wall was detected by that laser beam
     double d = dist_thresh_wf;
-    
     if (leftfront_dist > d && front_dist > d && rightfront_dist > d) {
         wall_following_state = "search for wall";
         cmdMsg->linear.x = forward_speed;
-        cmdMsg->angular.z = (-1) * turning_speed_wf_slow;  //turn right to wall
+        // cout << "here is the 1 branch" << endl;
     } else if (leftfront_dist > d && front_dist < d && rightfront_dist > d) {
         wall_following_state = "turn left";
-        cmdMsg->angular.z = turning_speed_wf_fast;
+        cmdMsg->angular.z = turning_speed_wf_slow;
+        // cout << "here is the 2 branch" << endl;
     } else if (leftfront_dist > d && front_dist > d && rightfront_dist < d) {
-        if (rightfront_dist < dist_too_close_to_wall) {
-            // Getting too close to the wall
-            wall_following_state = "turn left";
-            cmdMsg->linear.x = forward_speed;
-            cmdMsg->angular.z = turning_speed_wf_fast;
-        } else {
-            // Go straight ahead
-            wall_following_state = "follow wall";
-            cmdMsg->linear.x = forward_speed;
-        }        
+        cmdMsg->angular.z = turning_speed_wf_fast;
+        // cout << "here is the 3 branch" << endl;
     } else if (leftfront_dist < d && front_dist > d && rightfront_dist > d) {
-        wall_following_state = "search for wall";
-        cmdMsg->linear.x = forward_speed;
-        cmdMsg->angular.z = (-1) * turning_speed_wf_slow; // turn right to find wall
+        cmdMsg->angular.z = -turning_speed_wf_fast; // turn right to find wall
+        // cout << "here is the 4 branch" << endl;
     } else if (leftfront_dist > d && front_dist < d && rightfront_dist < d) {
         wall_following_state = "turn left";
         cmdMsg->angular.z = turning_speed_wf_fast;
+        // cout << "here is the 5 branch" << endl;
     } else if (leftfront_dist < d && front_dist < d && rightfront_dist > d) {
-        wall_following_state = "turn left";
-        cmdMsg->angular.z = turning_speed_wf_fast;
+        wall_following_state = "turn right";
+        cmdMsg->angular.z = -turning_speed_wf_fast;
+        // cout << "here is the 6 branch" << endl;
     } else if (leftfront_dist < d && front_dist < d && rightfront_dist < d) {
-        wall_following_state = "turn left";
-        cmdMsg->angular.z = turning_speed_wf_fast;
+        wall_following_state = "slow down";
+        cmdMsg->linear.x = -forward_speed;
+        // cout << "here is the 7 branch" << endl;
     } else if (leftfront_dist < d && front_dist > d && rightfront_dist < d) {
         wall_following_state = "search for wall";
         cmdMsg->linear.x = forward_speed;
-        cmdMsg->angular.z = (-1) * turning_speed_wf_slow; // turn right to find wall
+        // cout << "here is the 8 branch" << endl;
+    } else if (leftfront_dist > d && left_dist < d && right_dist >d) {
+        wall_following_state = "turn right";
+        cmdMsg->angular.z = -turning_speed_wf_fast;
+        // cout << "here is the 9 branch" << endl;
+    } else if (rightfront_dist > d && left_dist > d && right_dist < d) {
+        cmdMsg->angular.z = turning_speed_wf_fast;
+        // cout << "here is the 10 branch" << endl;
     } else {
         // do nothing
-    }  
+    }
  
     // Send velocity command to the robot
     cmd_pub_->publish(std::move(cmdMsg));    
@@ -142,7 +143,7 @@ private:
     /* ################### ROBOT CONTROL PARAMETERS ################## */
     // Maximum forward speed of the robot in meters per second
     // Any faster than this and the robot risks falling over.
-    double forward_speed = 0.025;    
+    double forward_speed = 0.01;    
 
     // Current position and orientation of the robot in the global reference frame
     double currentX_{0.0};
@@ -158,15 +159,15 @@ private:
          
     // Set turning speeds (to the left) in rad/s 
     // These values were determined by trial and error.
-    double turning_speed_wf_fast = 3.0;  // Fast turn
-    double turning_speed_wf_slow = 0.05; // Slow turn
+    double turning_speed_wf_fast = 0.05;  // Fast turn
+    double turning_speed_wf_slow = 0.025; // Slow turn
  
     // Wall following distance threshold.
     // We want to try to keep within this distance from the wall.
     double dist_thresh_wf = 0.50; // in meters  
 
     // We don't want to get too close to the wall though.
-    double dist_too_close_to_wall = 0.19; // in meters    
+    double dist_too_close_to_wall = 0.1; // in meters    
 };
 
 int main(int argc, char * argv[])
