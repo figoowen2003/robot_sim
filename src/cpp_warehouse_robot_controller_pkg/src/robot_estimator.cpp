@@ -85,41 +85,6 @@ private:
         auto yaw_rate = msg->angular.z;     
     }
 
-    // void OnSensorMsg(const sensor_msgs::msg::LaserScan::SharedPtr _msg)
-    // {
-    //     // Find closest hit
-    //     float min_range = _msg->range_max + 1;
-    //     int idx = -1;
-    //     for (auto i = 0u; i < _msg->ranges.size(); ++i) {
-    //     auto range = _msg->ranges[i];
-    //     if (range > _msg->range_min && range < _msg->range_max && range < min_range) {
-    //         min_range = range;
-    //         idx = i;
-    //     }
-    //     }
-
-    //     // Calculate desired yaw change
-    //     double turn = _msg->angle_min + _msg->angle_increment * idx;
-
-    //     // Populate command message, all weights have been calculated by trial and error
-    //     auto cmd_msg = std::make_unique<geometry_msgs::msg::Twist>();
-
-    //     // Bad readings, stop
-    //     if (idx < 0) {
-    //     cmd_msg->linear.x = 0;
-    //     cmd_msg->angular.z = 0;
-    //     } else if (min_range <= min_dist_) {
-    //     // Too close, just rotate
-    //     cmd_msg->linear.x = 0;
-    //     cmd_msg->angular.z = turn * angular_k_;
-    //     } else {
-    //     cmd_msg->linear.x = linear_k_ / abs(turn);
-    //     cmd_msg->angular.z = turn * angular_k_;
-    //     }
-
-    //     cmd_pub_->publish(std::move(cmd_msg));
-    // }    
-
     // odom messages subscriber
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
     // twist messages subscriber
