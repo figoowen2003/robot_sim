@@ -1,5 +1,4 @@
 #include <rclcpp/rclcpp.hpp>
-// #include <rclcpp/executors.hpp>
 #include <gazebo_msgs/srv/spawn_entity.hpp>
 #include <ament_index_cpp/get_package_share_directory.hpp>
 
@@ -82,7 +81,7 @@ int main(int argc, char *argv[]) {
     if (rclcpp::spin_until_future_complete(node, result) ==
         rclcpp::FutureReturnCode::SUCCESS)
     {
-        cout << "response: OK" << endl;
+        cout << "response: OK!" << endl;
     } else {
         RCLCPP_ERROR(node->get_logger(), "service call failed :(");
         return -1;
