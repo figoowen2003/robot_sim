@@ -15,18 +15,18 @@ using namespace std::placeholders;
 class RobotController : public rclcpp::Node {
 public:
     RobotController() : Node("Controller") {
-        auto default_qos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
+        auto defaultQos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
         // This node subscribes to messages of type Float64MultiArray
         // over a topic named: /demo/state_est
         // The message represents the current estimated state:
         //      [x, y, yaw]
         est_state_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
-            "/demo/state_est", default_qos,
+            "/demo/state_est", defaultQos,
             std::bind(&RobotController::OnStateEstimatedMsg, this, _1));
 
         // Subscribe to sensor messages
         laser_sub_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "/demo/laser/out", default_qos,
+            "/demo/laser/out", defaultQos,
             std::bind(&RobotController::OnSensorMsg, this, _1));
 
         // This node publishes the desired linear and angular velocity of the 
@@ -34,7 +34,7 @@ public:
         // Using the diff_drive plugin enables the robot model to read this
         // /demo/cmd_vel topic and excute the motion accordingly
         cmd_pub_ = this->create_publisher<geometry_msgs::msg::Twist>(
-            "/demo/cmd_vel", default_qos);        
+            "/demo/cmd_vel", defaultQos);        
     }
 private:
     void OnStateEstimatedMsg(const std_msgs::msg::Float64MultiArray::SharedPtr msg) {
@@ -68,64 +68,64 @@ private:
     }
 
     void FollowWall() { 
-    // This method causes the robot to follow the boundary of a wall.
-    // Create a geometry_msgs/Twist message
-    auto cmdMsg = std::make_unique<geometry_msgs::msg::Twist>();
+        // This method causes the robot to follow the boundary of a wall.
+        // Create a geometry_msgs/Twist message
+        auto cmdMsg = std::make_unique<geometry_msgs::msg::Twist>();
 
-    cmdMsg->linear.x = 0.0;
-    cmdMsg->linear.y = 0.0;
-    cmdMsg->linear.z = 0.0;
-    cmdMsg->angular.x = 0.0;
-    cmdMsg->angular.y = 0.0;
-    cmdMsg->angular.z = 0.0;       
- 
-    // Logic for following the wall
-    // >d means no wall detected by that laser beam
-    // <d means an wall was detected by that laser beam
-    double d = dist_thresh_wf;
-    if (leftfront_dist > d && front_dist > d && rightfront_dist > d) {
-        wall_following_state = "search for wall";
-        cmdMsg->linear.x = forward_speed;
-        // cout << "here is the 1 branch" << endl;
-    } else if (leftfront_dist > d && front_dist < d && rightfront_dist > d) {
-        wall_following_state = "turn left";
-        cmdMsg->angular.z = turning_speed_wf_slow;
-        // cout << "here is the 2 branch" << endl;
-    } else if (leftfront_dist > d && front_dist > d && rightfront_dist < d) {
-        cmdMsg->angular.z = turning_speed_wf_fast;
-        // cout << "here is the 3 branch" << endl;
-    } else if (leftfront_dist < d && front_dist > d && rightfront_dist > d) {
-        cmdMsg->angular.z = -turning_speed_wf_fast; // turn right to find wall
-        // cout << "here is the 4 branch" << endl;
-    } else if (leftfront_dist > d && front_dist < d && rightfront_dist < d) {
-        wall_following_state = "turn left";
-        cmdMsg->angular.z = turning_speed_wf_fast;
-        // cout << "here is the 5 branch" << endl;
-    } else if (leftfront_dist < d && front_dist < d && rightfront_dist > d) {
-        wall_following_state = "turn right";
-        cmdMsg->angular.z = -turning_speed_wf_fast;
-        // cout << "here is the 6 branch" << endl;
-    } else if (leftfront_dist < d && front_dist < d && rightfront_dist < d) {
-        wall_following_state = "slow down";
-        cmdMsg->linear.x = -forward_speed;
-        // cout << "here is the 7 branch" << endl;
-    } else if (leftfront_dist < d && front_dist > d && rightfront_dist < d) {
-        wall_following_state = "search for wall";
-        cmdMsg->linear.x = forward_speed;
-        // cout << "here is the 8 branch" << endl;
-    } else if (leftfront_dist > d && left_dist < d && right_dist >d) {
-        wall_following_state = "turn right";
-        cmdMsg->angular.z = -turning_speed_wf_fast;
-        // cout << "here is the 9 branch" << endl;
-    } else if (rightfront_dist > d && left_dist > d && right_dist < d) {
-        cmdMsg->angular.z = turning_speed_wf_fast;
-        // cout << "here is the 10 branch" << endl;
-    } else {
-        // do nothing
-    }
- 
-    // Send velocity command to the robot
-    cmd_pub_->publish(std::move(cmdMsg));    
+        cmdMsg->linear.x = 0.0;
+        cmdMsg->linear.y = 0.0;
+        cmdMsg->linear.z = 0.0;
+        cmdMsg->angular.x = 0.0;
+        cmdMsg->angular.y = 0.0;
+        cmdMsg->angular.z = 0.0;       
+    
+        // Logic for following the wall
+        // >d means no wall detected by that laser beam
+        // <d means an wall was detected by that laser beam
+        double d = dist_thresh_wf;
+        if (leftfront_dist > d && front_dist > d && rightfront_dist > d) {
+            wall_following_state = "search for wall";
+            cmdMsg->linear.x = forward_speed;
+            // cout << "here is the 1 branch" << endl;
+        } else if (leftfront_dist > d && front_dist < d && rightfront_dist > d) {
+            wall_following_state = "turn left";
+            cmdMsg->angular.z = turning_speed_wf_slow;
+            // cout << "here is the 2 branch" << endl;
+        } else if (leftfront_dist > d && front_dist > d && rightfront_dist < d) {
+            cmdMsg->angular.z = turning_speed_wf_fast;
+            // cout << "here is the 3 branch" << endl;
+        } else if (leftfront_dist < d && front_dist > d && rightfront_dist > d) {
+            cmdMsg->angular.z = -turning_speed_wf_fast; // turn right to find wall
+            // cout << "here is the 4 branch" << endl;
+        } else if (leftfront_dist > d && front_dist < d && rightfront_dist < d) {
+            wall_following_state = "turn left";
+            cmdMsg->angular.z = turning_speed_wf_fast;
+            // cout << "here is the 5 branch" << endl;
+        } else if (leftfront_dist < d && front_dist < d && rightfront_dist > d) {
+            wall_following_state = "turn right";
+            cmdMsg->angular.z = -turning_speed_wf_fast;
+            // cout << "here is the 6 branch" << endl;
+        } else if (leftfront_dist < d && front_dist < d && rightfront_dist < d) {
+            wall_following_state = "slow down";
+            cmdMsg->linear.x = -forward_speed;
+            // cout << "here is the 7 branch" << endl;
+        } else if (leftfront_dist < d && front_dist > d && rightfront_dist < d) {
+            wall_following_state = "search for wall";
+            cmdMsg->linear.x = forward_speed;
+            // cout << "here is the 8 branch" << endl;
+        } else if (leftfront_dist > d && left_dist < d && right_dist >d) {
+            wall_following_state = "turn right";
+            cmdMsg->angular.z = -turning_speed_wf_fast;
+            // cout << "here is the 9 branch" << endl;
+        } else if (rightfront_dist > d && left_dist > d && right_dist < d) {
+            cmdMsg->angular.z = turning_speed_wf_fast;
+            // cout << "here is the 10 branch" << endl;
+        } else {
+            // do nothing
+        }
+    
+        // Send velocity command to the robot
+        cmd_pub_->publish(std::move(cmdMsg));    
     }
 
     rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr est_state_sub_;
