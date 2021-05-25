@@ -41,8 +41,6 @@ public:
         PubVelFromKeyboard();
     }
 
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmdPub_;
-
 private:
     int GetCh(void)
     {
@@ -110,7 +108,8 @@ private:
         {'l', std::make_tuple(0.0, -0.01)},
         {'s', std::make_tuple(0.0, 0.0)}        
     };   
-    char key_{' '};               
+    char key_{' '};
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmdPub_;            
 };
 
 int main(int argc, char * argv[])
