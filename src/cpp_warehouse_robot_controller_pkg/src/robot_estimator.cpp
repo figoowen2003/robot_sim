@@ -17,20 +17,20 @@ public:
     RobotEstimator() : Node("Estimator") {
         auto defaultQos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
         // Subscribe to messages of type nav_msgs/Odometry(positon and orientation of robot)
-        odom_sub_ = this->create_subscription<nav_msgs::msg::Odometry>(
+        odomSub_ = this->create_subscription<nav_msgs::msg::Odometry>(
             "/demo/odom", defaultQos,
             std::bind(&RobotEstimator::OnOdomMsg, this, _1));
 
         // This node subscribes to messages of tpye geometry_msgs/Twist.msg
         // We are listening to the velocity commands here
         // The maximum number of queued messages is 10
-        velocity_sub_ = this->create_subscription<geometry_msgs::msg::Twist>(
+        velocitySub_ = this->create_subscription<geometry_msgs::msg::Twist>(
         "demo/cmd_vel", defaultQos,
         std::bind(&RobotEstimator::OnVelocityMsg, this, _1));           
 
         // This node Pulbishes the estimated position (x, y, yaw),
         // the type of messages is std_msg/Float64MultiArray
-        est_state_pub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/demo/state_est", defaultQos);
+        estStatePub_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/demo/state_est", defaultQos);
 
     }
 
@@ -50,7 +50,7 @@ private:
         msg.data.push_back(get<1>(state));
         msg.data.push_back(get<2>(state));
 
-        est_state_pub_->publish(msg);      
+        estStatePub_->publish(msg);      
     }
 
     tuple<float, float, float> GetEulerFromQuaternion(const geometry_msgs::msg::Quaternion &orientation) {
@@ -86,12 +86,12 @@ private:
     }
 
     // odom messages subscriber
-    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odomSub_;
     // twist messages subscriber
-    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr velocity_sub_;
+    rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr velocitySub_;
 
     // estimate state publisher
-    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr est_state_pub_;   
+    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr estStatePub_;   
 };
 
 int main(int argc, char * argv[])

@@ -20,12 +20,12 @@ public:
         // over a topic named: /demo/state_est
         // The message represents the current estimated state:
         //      [x, y, yaw]
-        est_state_sub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
+        estStateSub_ = this->create_subscription<std_msgs::msg::Float64MultiArray>(
             "/demo/state_est", defaultQos,
             std::bind(&RobotController::OnStateEstimatedMsg, this, _1));
 
         // Subscribe to sensor messages
-        laser_sub_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
+        laserSub_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
             "/demo/laser/out", defaultQos,
             std::bind(&RobotController::OnSensorMsg, this, _1));
 
@@ -33,7 +33,7 @@ public:
         // robot(in the robot chassis coordinate frame) to the /demo/cmd_vel topic
         // Using the diff_drive plugin enables the robot model to read this
         // /demo/cmd_vel topic and excute the motion accordingly
-        cmd_pub_ = this->create_publisher<geometry_msgs::msg::Twist>(
+        cmdPub_ = this->create_publisher<geometry_msgs::msg::Twist>(
             "/demo/cmd_vel", defaultQos);        
     }
 private:
@@ -60,11 +60,11 @@ private:
         // (e.g. -90 to 90 degrees.....0 to 180 degrees)
 
         // number of laser beams = str(len(msg.ranges))
-        left_dist = msg->ranges[180];
-        leftfront_dist = msg->ranges[135];
-        front_dist = msg->ranges[90];
-        rightfront_dist = msg->ranges[45];
-        right_dist = msg->ranges[0];
+        leftDist_ = msg->ranges[180];
+        leftFrontDist_ = msg->ranges[135];
+        frontDist_ = msg->ranges[90];
+        rightFrontDist_ = msg->ranges[45];
+        rightDist_ = msg->ranges[0];
     }
 
     void FollowWall() { 
@@ -82,68 +82,68 @@ private:
         // Logic for following the wall
         // >d means no wall detected by that laser beam
         // <d means an wall was detected by that laser beam
-        double d = dist_thresh_wf;
-        if (leftfront_dist > d && front_dist > d && rightfront_dist > d) {
-            wall_following_state = "search for wall";
-            cmdMsg->linear.x = forward_speed;
+        double d = distThreshWf_;
+        if (leftFrontDist_ > d && frontDist_ > d && rightFrontDist_ > d) {
+            wallFollowingState_ = "search for wall";
+            cmdMsg->linear.x = forwardSpeed_;
             // cout << "here is the 1 branch" << endl;
-        } else if (leftfront_dist > d && front_dist < d && rightfront_dist > d) {
-            wall_following_state = "turn left";
-            cmdMsg->angular.z = turning_speed_wf_slow;
+        } else if (leftFrontDist_ > d && frontDist_ < d && rightFrontDist_ > d) {
+            wallFollowingState_ = "turn left";
+            cmdMsg->angular.z = turningSpeedWfSlow_;
             // cout << "here is the 2 branch" << endl;
-        } else if (leftfront_dist > d && front_dist > d && rightfront_dist < d) {
-            cmdMsg->angular.z = turning_speed_wf_fast;
+        } else if (leftFrontDist_ > d && frontDist_ > d && rightFrontDist_ < d) {
+            cmdMsg->angular.z = turningSpeedWfFast_;
             // cout << "here is the 3 branch" << endl;
-        } else if (leftfront_dist < d && front_dist > d && rightfront_dist > d) {
-            cmdMsg->angular.z = -turning_speed_wf_fast; // turn right to find wall
+        } else if (leftFrontDist_ < d && frontDist_ > d && rightFrontDist_ > d) {
+            cmdMsg->angular.z = -turningSpeedWfFast_; // turn right to find wall
             // cout << "here is the 4 branch" << endl;
-        } else if (leftfront_dist > d && front_dist < d && rightfront_dist < d) {
-            wall_following_state = "turn left";
-            cmdMsg->angular.z = turning_speed_wf_fast;
+        } else if (leftFrontDist_ > d && frontDist_ < d && rightFrontDist_ < d) {
+            wallFollowingState_ = "turn left";
+            cmdMsg->angular.z = turningSpeedWfFast_;
             // cout << "here is the 5 branch" << endl;
-        } else if (leftfront_dist < d && front_dist < d && rightfront_dist > d) {
-            wall_following_state = "turn right";
-            cmdMsg->angular.z = -turning_speed_wf_fast;
+        } else if (leftFrontDist_ < d && frontDist_ < d && rightFrontDist_ > d) {
+            wallFollowingState_ = "turn right";
+            cmdMsg->angular.z = -turningSpeedWfFast_;
             // cout << "here is the 6 branch" << endl;
-        } else if (leftfront_dist < d && front_dist < d && rightfront_dist < d) {
-            wall_following_state = "slow down";
-            cmdMsg->linear.x = -forward_speed;
+        } else if (leftFrontDist_ < d && frontDist_ < d && rightFrontDist_ < d) {
+            wallFollowingState_ = "slow down";
+            cmdMsg->linear.x = -forwardSpeed_;
             // cout << "here is the 7 branch" << endl;
-        } else if (leftfront_dist < d && front_dist > d && rightfront_dist < d) {
-            wall_following_state = "search for wall";
-            cmdMsg->linear.x = forward_speed;
+        } else if (leftFrontDist_ < d && frontDist_ > d && rightFrontDist_ < d) {
+            wallFollowingState_ = "search for wall";
+            cmdMsg->linear.x = forwardSpeed_;
             // cout << "here is the 8 branch" << endl;
-        } else if (leftfront_dist > d && left_dist < d && right_dist >d) {
-            wall_following_state = "turn right";
-            cmdMsg->angular.z = -turning_speed_wf_fast;
+        } else if (leftFrontDist_ > d && leftDist_ < d && rightDist_ >d) {
+            wallFollowingState_ = "turn right";
+            cmdMsg->angular.z = -turningSpeedWfFast_;
             // cout << "here is the 9 branch" << endl;
-        } else if (rightfront_dist > d && left_dist > d && right_dist < d) {
-            cmdMsg->angular.z = turning_speed_wf_fast;
+        } else if (rightFrontDist_ > d && leftDist_ > d && rightDist_ < d) {
+            cmdMsg->angular.z = turningSpeedWfFast_;
             // cout << "here is the 10 branch" << endl;
         } else {
             // do nothing
         }
     
         // Send velocity command to the robot
-        cmd_pub_->publish(std::move(cmdMsg));    
+        cmdPub_->publish(std::move(cmdMsg));    
     }
 
-    rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr est_state_sub_;
-    rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr laser_sub_;
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_pub_;
+    rclcpp::Subscription<std_msgs::msg::Float64MultiArray>::SharedPtr estStateSub_;
+    rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr laserSub_;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmdPub_;
 
     // Initialize the LaserScan sensor readings to some large value
     // Values are in meters.
-    double left_dist = 999999.9; // Left
-    double leftfront_dist = 999999.9; // Left-front
-    double front_dist = 999999.9; // Front
-    double rightfront_dist = 999999.9; // Right-front
-    double right_dist = 999999.9; // Right
+    double leftDist_ = 999999.9; // Left
+    double leftFrontDist_ = 999999.9; // Left-front
+    double frontDist_ = 999999.9; // Front
+    double rightFrontDist_ = 999999.9; // Right-front
+    double rightDist_ = 999999.9; // Right
  
     /* ################### ROBOT CONTROL PARAMETERS ################## */
     // Maximum forward speed of the robot in meters per second
     // Any faster than this and the robot risks falling over.
-    double forward_speed = 0.01;    
+    double forwardSpeed_ = 0.01;    
 
     // Current position and orientation of the robot in the global reference frame
     double currentX_{0.0};
@@ -155,19 +155,19 @@ private:
     //  "turn left": Robot turns towards the left
     //  "search for wall": Robot tries to locate the wall        
     //  "follow wall": Robot moves parallel to the wall
-    string wall_following_state = "turn left";
+    string wallFollowingState_ = "turn left";
          
     // Set turning speeds (to the left) in rad/s 
     // These values were determined by trial and error.
-    double turning_speed_wf_fast = 0.05;  // Fast turn
-    double turning_speed_wf_slow = 0.025; // Slow turn
+    double turningSpeedWfFast_ = 0.05;  // Fast turn
+    double turningSpeedWfSlow_ = 0.025; // Slow turn
  
     // Wall following distance threshold.
     // We want to try to keep within this distance from the wall.
-    double dist_thresh_wf = 0.50; // in meters  
+    double distThreshWf_ = 0.50; // in meters  
 
     // We don't want to get too close to the wall though.
-    double dist_too_close_to_wall = 0.1; // in meters    
+    double distTooCloseToWall_ = 0.1; // in meters    
 };
 
 int main(int argc, char * argv[])
