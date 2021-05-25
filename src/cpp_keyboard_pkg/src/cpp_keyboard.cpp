@@ -70,9 +70,7 @@ private:
         return ch;
     }
 
-    void PubVelFromKeyboard() {
-        // auto cmd_msg = std::make_unique<geometry_msgs::msg::Twist>();        
-
+    void PubVelFromKeyboard() {    
         while(true){
             // Get the pressed key_
             key_ = GetCh();
