@@ -1,4 +1,4 @@
-// Copyright 2018 Louise Poubel.
+// Copyright 2021 Mu Wenfeng
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,18 +33,18 @@ public:
     KeyboardController()
     : Node("KeyboardController")
     {
-        auto default_qos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
+        auto defaultQos = rclcpp::QoS(rclcpp::SystemDefaultsQoS());
 
         // Advertise velocity commands
-        cmd_pub_ = this->create_publisher<geometry_msgs::msg::Twist>("/demo/cmd_vel", default_qos); 
+        cmdPub_ = this->create_publisher<geometry_msgs::msg::Twist>("/demo/cmd_vel", defaultQos); 
 
         PubVelFromKeyboard();
     }
 
-    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_pub_;
+    rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmdPub_;
 
 private:
-    int getch(void)
+    int GetCh(void)
     {
         int ch;
         struct termios oldt;
@@ -76,18 +76,18 @@ private:
         // auto cmd_msg = std::make_unique<geometry_msgs::msg::Twist>();        
 
         while(true){
-            // Get the pressed key
-            key = getch();
-            if (moveMap.count(key) == 1) {
+            // Get the pressed key_
+            key_ = GetCh();
+            if (moveMap_.count(key_) == 1) {
                 auto cmd_msg = std::make_unique<geometry_msgs::msg::Twist>(); 
-                cmd_msg->linear.x = std::get<0>(moveMap[key]);
-                cmd_msg->angular.z = std::get<1>(moveMap[key]);
-                printf("\rCurrent: x %f\t %f | Last command: %c   ", cmd_msg->linear.x, cmd_msg->angular.z, key);
-                cmd_pub_->publish(std::move(cmd_msg));                
-            } else if (key == '\x03') {
+                cmd_msg->linear.x = std::get<0>(moveMap_[key_]);
+                cmd_msg->angular.z = std::get<1>(moveMap_[key_]);
+                printf("\rCurrent: x %f\t %f | Last command: %c   ", cmd_msg->linear.x, cmd_msg->angular.z, key_);
+                cmdPub_->publish(std::move(cmd_msg));                
+            } else if (key_ == '\x03') {
                 break;
             } else {
-                printf("\rInvalid command! %c", key);
+                printf("\rInvalid command! %c", key_);
             }
         }
 
@@ -99,18 +99,18 @@ private:
         cmd_msg->angular.y = 0;
         cmd_msg->angular.z = 0;
 
-        cmd_pub_->publish(std::move(cmd_msg));  
+        cmdPub_->publish(std::move(cmd_msg));  
     }
 
     // Map for movement keys
-    std::map<char, std::tuple<double, double>> moveMap {
+    std::map<char, std::tuple<double, double>> moveMap_ {
         {'i', std::make_tuple(0.01, 0.0)},
         {'k', std::make_tuple(-0.01, 0.0)},
         {'j', std::make_tuple(0.0, 0.01)},
         {'l', std::make_tuple(0.0, -0.01)},
         {'s', std::make_tuple(0.0, 0.0)}        
     };   
-    char key{' '};               
+    char key_{' '};               
 };
 
 int main(int argc, char * argv[])
