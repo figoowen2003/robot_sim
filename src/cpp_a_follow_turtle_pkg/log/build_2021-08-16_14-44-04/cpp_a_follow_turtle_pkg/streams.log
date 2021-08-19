@@ -1,0 +1,30 @@
+[0.023s] Invoking command in '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg': CMAKE_PREFIX_PATH=/opt/ros/rolling /usr/bin/cmake --build /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg -- -j8 -l8
+[0.078s] [35m[1mScanning dependencies of target turtle_spawner[0m
+[0.101s] [ 50%] Built target turtle_pub
+[0.115s] [ 75%] [32mBuilding CXX object CMakeFiles/turtle_spawner.dir/src/new_turtle_spawner.cpp.o[0m
+[3.865s] [100%] [32m[1mLinking CXX executable turtle_spawner[0m
+[4.070s] [100%] Built target turtle_spawner
+[4.089s] Invoked command in '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/rolling /usr/bin/cmake --build /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg -- -j8 -l8
+[4.153s] Invoking command in '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg': CMAKE_PREFIX_PATH=/opt/ros/rolling /usr/bin/cmake --install /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg
+[4.167s] -- Install configuration: ""
+[4.167s] -- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_spawner
+[4.168s] -- Set runtime path of "/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_spawner" to ""
+[4.168s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_pub
+[4.169s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg//launch
+[4.169s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg//launch/follow_turtle.launch.py
+[4.169s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/package_run_dependencies/cpp_a_follow_turtle_pkg
+[4.170s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/parent_prefix_path/cpp_a_follow_turtle_pkg
+[4.170s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/ament_prefix_path.sh
+[4.170s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/ament_prefix_path.dsv
+[4.171s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/path.sh
+[4.172s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/path.dsv
+[4.174s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.bash
+[4.174s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.sh
+[4.175s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.zsh
+[4.175s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.dsv
+[4.176s] -- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/package.dsv
+[4.177s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/packages/cpp_a_follow_turtle_pkg
+[4.178s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/cmake/cpp_a_follow_turtle_pkgConfig.cmake
+[4.178s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/cmake/cpp_a_follow_turtle_pkgConfig-version.cmake
+[4.178s] -- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/package.xml
+[4.179s] Invoked command in '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/rolling /usr/bin/cmake --install /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg

@@ -1,0 +1,15 @@
+In file included from [01m[K/opt/ros/rolling/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/executor.hpp:36[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/rolling/include/rclcpp/rclcpp.hpp:156[m[K,
+                 from [01m[K/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/src/new_turtle_spawner.cpp:5[m[K:
+[01m[K/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/src/new_turtle_spawner.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/src/new_turtle_spawner.cpp:16:37:[m[K [01;35m[Kwarning: [m[Kzero-length gnu_printf format string [[01;35m[K-Wformat-zero-length[m[K]
+   16 |     RCLCPP_INFO(node->get_logger(), [01;35m[K""[m[K);
+      |                                     [01;35m[K^~[m[K

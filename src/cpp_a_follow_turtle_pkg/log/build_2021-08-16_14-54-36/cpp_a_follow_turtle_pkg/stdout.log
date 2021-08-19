@@ -1,0 +1,22 @@
+[ 50%] Built target turtle_spawner
+[100%] Built target turtle_pub
+-- Install configuration: ""
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_spawner
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_pub
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg//launch
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg//launch/follow_turtle.launch.py
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/package_run_dependencies/cpp_a_follow_turtle_pkg
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/parent_prefix_path/cpp_a_follow_turtle_pkg
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/ament_prefix_path.sh
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/path.sh
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/path.dsv
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.bash
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.sh
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.zsh
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.dsv
+-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/package.dsv
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/packages/cpp_a_follow_turtle_pkg
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/cmake/cpp_a_follow_turtle_pkgConfig.cmake
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/cmake/cpp_a_follow_turtle_pkgConfig-version.cmake
+-- Up-to-date: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/package.xml

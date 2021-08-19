@@ -1,0 +1,260 @@
+[0.000000] (-) TimerEvent: {}
+[0.000668] (cpp_a_follow_turtle_pkg) JobQueued: {'identifier': 'cpp_a_follow_turtle_pkg', 'dependencies': OrderedDict()}
+[0.000959] (cpp_a_follow_turtle_pkg) JobStarted: {'identifier': 'cpp_a_follow_turtle_pkg'}
+[0.015777] (cpp_a_follow_turtle_pkg) JobProgress: {'identifier': 'cpp_a_follow_turtle_pkg', 'progress': 'cmake'}
+[0.016117] (cpp_a_follow_turtle_pkg) Command: {'cmd': ['/usr/bin/cmake', '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg', '-DCMAKE_INSTALL_PREFIX=/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg'], 'cwd': '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu-ros2'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1800'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/71/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/rolling/opt/yaml_cpp_vendor/lib:/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/ubuntu-ros2'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.59.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/71/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/71/usr/share/code/code'), ('ROS_IP', '192.168.43.8'), ('MANAGERPID', '1609'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9af7c7c9c460f1aeb0c237416119c8c2'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '22094'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'rolling'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'ubuntu-ros2'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:46694'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu-ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('SESSION_MANAGER', 'local/ubunturos2-NBLK-WAX9X:@/tmp/.ICE-unix/1874,unix/ubunturos2-NBLK-WAX9X:/tmp/.ICE-unix/1874'), ('INVOCATION_ID', '1a8e9e3ee895474491aed625f5f3ea94'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fd3d5c4d93.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/snap/code/71/usr/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/rolling'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('DISABLE_WAYLAND', '1'), ('QT_ACCESSIBILITY', '1'), ('NO_AT_BRIDGE', '1'), ('ROS_MASTER_URI', 'http://192.168.43.41:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9af7c7c9c460f1aeb0c237416119c8c2'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/rolling/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('BREAKPAD_DUMP_LOCATION', '/home/ubuntu-ros2/.config/Code/exthost Crash Reports'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/rolling')]), 'shell': False}
+[0.099635] (-) TimerEvent: {}
+[0.130771] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[0.199739] (-) TimerEvent: {}
+[0.204370] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[0.213574] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.299883] (-) TimerEvent: {}
+[0.328849] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.330417] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400029] (-) TimerEvent: {}
+[0.432791] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.454858] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.455375] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.458743] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.500170] (-) TimerEvent: {}
+[0.573010] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.576092] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.600289] (-) TimerEvent: {}
+[0.690701] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.700416] (-) TimerEvent: {}
+[0.709303] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.709857] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.713682] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.1.4 (/opt/ros/rolling/share/ament_cmake/cmake)\n'}
+[0.750473] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.750743] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.800518] (-) TimerEvent: {}
+[0.875363] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found tf2: 0.18.0 (/opt/ros/rolling/share/tf2/cmake)\n'}
+[0.900644] (-) TimerEvent: {}
+[0.916633] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.926865] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 2.4.0 (/opt/ros/rolling/share/rosidl_adapter/cmake)\n'}
+[1.000781] (-) TimerEvent: {}
+[1.088257] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.101031] (-) TimerEvent: {}
+[1.123541] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/rolling/include  \n'}
+[1.201140] (-) TimerEvent: {}
+[1.214413] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.301255] (-) TimerEvent: {}
+[1.325048] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found tf2_ros: 0.18.0 (/opt/ros/rolling/share/tf2_ros/cmake)\n'}
+[1.401367] (-) TimerEvent: {}
+[1.402973] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 4.0.0 (/opt/ros/rolling/share/rmw_implementation_cmake/cmake)\n'}
+[1.406468] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 0.23.1 (/opt/ros/rolling/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.430172] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.432030] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.501512] (-) TimerEvent: {}
+[1.533405] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.534185] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.601620] (-) TimerEvent: {}
+[1.641163] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.641692] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.701754] (-) TimerEvent: {}
+[1.739285] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.739624] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.801881] (-) TimerEvent: {}
+[1.847435] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.849923] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.901991] (-) TimerEvent: {}
+[2.002403] (-) TimerEvent: {}
+[2.102847] (-) TimerEvent: {}
+[2.203340] (-) TimerEvent: {}
+[2.303821] (-) TimerEvent: {}
+[2.404308] (-) TimerEvent: {}
+[2.444343] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.18.0 (/opt/ros/rolling/share/tf2_geometry_msgs/cmake)\n'}
+[2.454483] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/rolling/share/eigen3_cmake_module/cmake)\n'}
+[2.457910] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.3.7") \n'}
+[2.492255] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found turtlesim: 1.3.2 (/opt/ros/rolling/share/turtlesim/cmake)\n'}
+[2.504447] (-) TimerEvent: {}
+[2.560583] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.11.2 (/opt/ros/rolling/share/ament_lint_auto/cmake)\n'}
+[2.604550] (-) TimerEvent: {}
+[2.656298] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.664364] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.664766] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[2.665044] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.673083] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.673377] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.675015] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.680906] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.683917] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[2.693390] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.693731] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.695266] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.699242] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.704680] (-) TimerEvent: {}
+[2.723136] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[2.726938] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Build files have been written to: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg\n'}
+[2.742704] (cpp_a_follow_turtle_pkg) CommandEnded: {'returncode': 0}
+[2.744346] (cpp_a_follow_turtle_pkg) JobProgress: {'identifier': 'cpp_a_follow_turtle_pkg', 'progress': 'build'}
+[2.745897] (cpp_a_follow_turtle_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg', '--', '-j8', '-l8'], 'cwd': '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu-ros2'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1800'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/71/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/rolling/opt/yaml_cpp_vendor/lib:/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/ubuntu-ros2'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.59.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/71/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/71/usr/share/code/code'), ('ROS_IP', '192.168.43.8'), ('MANAGERPID', '1609'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9af7c7c9c460f1aeb0c237416119c8c2'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '22094'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'rolling'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'ubuntu-ros2'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:46694'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu-ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('SESSION_MANAGER', 'local/ubunturos2-NBLK-WAX9X:@/tmp/.ICE-unix/1874,unix/ubunturos2-NBLK-WAX9X:/tmp/.ICE-unix/1874'), ('INVOCATION_ID', '1a8e9e3ee895474491aed625f5f3ea94'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fd3d5c4d93.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/snap/code/71/usr/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/rolling'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('DISABLE_WAYLAND', '1'), ('QT_ACCESSIBILITY', '1'), ('NO_AT_BRIDGE', '1'), ('ROS_MASTER_URI', 'http://192.168.43.41:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9af7c7c9c460f1aeb0c237416119c8c2'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/rolling/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('BREAKPAD_DUMP_LOCATION', '/home/ubuntu-ros2/.config/Code/exthost Crash Reports'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/rolling')]), 'shell': False}
+[2.804837] (-) TimerEvent: {}
+[2.829653] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target turtle_spawner\x1b[0m\n'}
+[2.829992] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target turtle_pub\x1b[0m\n'}
+[2.901514] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/turtle_spawner.dir/src/new_turtle_spawner.cpp.o\x1b[0m\n'}
+[2.904971] (-) TimerEvent: {}
+[2.907389] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/turtle_pub.dir/src/turtles_pose_pub.cpp.o\x1b[0m\n'}
+[3.005094] (-) TimerEvent: {}
+[3.105523] (-) TimerEvent: {}
+[3.205954] (-) TimerEvent: {}
+[3.306388] (-) TimerEvent: {}
+[3.406927] (-) TimerEvent: {}
+[3.507462] (-) TimerEvent: {}
+[3.608071] (-) TimerEvent: {}
+[3.708545] (-) TimerEvent: {}
+[3.808962] (-) TimerEvent: {}
+[3.909472] (-) TimerEvent: {}
+[4.009956] (-) TimerEvent: {}
+[4.110434] (-) TimerEvent: {}
+[4.210935] (-) TimerEvent: {}
+[4.311418] (-) TimerEvent: {}
+[4.411997] (-) TimerEvent: {}
+[4.512492] (-) TimerEvent: {}
+[4.613098] (-) TimerEvent: {}
+[4.713689] (-) TimerEvent: {}
+[4.814120] (-) TimerEvent: {}
+[4.914664] (-) TimerEvent: {}
+[5.015213] (-) TimerEvent: {}
+[5.115710] (-) TimerEvent: {}
+[5.216182] (-) TimerEvent: {}
+[5.316697] (-) TimerEvent: {}
+[5.417204] (-) TimerEvent: {}
+[5.517699] (-) TimerEvent: {}
+[5.618082] (-) TimerEvent: {}
+[5.691185] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[5.691511] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/callback_group.hpp:23\x1b[m\x1b[K,\n'}
+[5.691672] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[5.691843] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[5.691986] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[5.692121] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[5.692280] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/executor.hpp:36\x1b[m\x1b[K,\n'}
+[5.692425] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[5.692554] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[5.692676] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/rolling/include/rclcpp/rclcpp.hpp:156\x1b[m\x1b[K,\n'}
+[5.692795] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/src/new_turtle_spawner.cpp:5\x1b[m\x1b[K:\n'}
+[5.692942] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/src/new_turtle_spawner.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.693069] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/src/new_turtle_spawner.cpp:16:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kzero-length gnu_printf format string [\x1b[01;35m\x1b[K-Wformat-zero-length\x1b[m\x1b[K]\n'}
+[5.693201] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'   16 |     RCLCPP_INFO(node->get_logger(), \x1b[01;35m\x1b[K""\x1b[m\x1b[K);\n'}
+[5.693392] (cpp_a_follow_turtle_pkg) StderrLine: {'line': b'      |                                     \x1b[01;35m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.718214] (-) TimerEvent: {}
+[5.818726] (-) TimerEvent: {}
+[5.919116] (-) TimerEvent: {}
+[6.019632] (-) TimerEvent: {}
+[6.120015] (-) TimerEvent: {}
+[6.220379] (-) TimerEvent: {}
+[6.320762] (-) TimerEvent: {}
+[6.421145] (-) TimerEvent: {}
+[6.521506] (-) TimerEvent: {}
+[6.621951] (-) TimerEvent: {}
+[6.722341] (-) TimerEvent: {}
+[6.822776] (-) TimerEvent: {}
+[6.923202] (-) TimerEvent: {}
+[7.023629] (-) TimerEvent: {}
+[7.124101] (-) TimerEvent: {}
+[7.163736] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable turtle_spawner\x1b[0m\n'}
+[7.224213] (-) TimerEvent: {}
+[7.324685] (-) TimerEvent: {}
+[7.417430] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'[ 75%] Built target turtle_spawner\n'}
+[7.424809] (-) TimerEvent: {}
+[7.525176] (-) TimerEvent: {}
+[7.625529] (-) TimerEvent: {}
+[7.725902] (-) TimerEvent: {}
+[7.826249] (-) TimerEvent: {}
+[7.926618] (-) TimerEvent: {}
+[8.027046] (-) TimerEvent: {}
+[8.127520] (-) TimerEvent: {}
+[8.227996] (-) TimerEvent: {}
+[8.328454] (-) TimerEvent: {}
+[8.428935] (-) TimerEvent: {}
+[8.529483] (-) TimerEvent: {}
+[8.629991] (-) TimerEvent: {}
+[8.730395] (-) TimerEvent: {}
+[8.830820] (-) TimerEvent: {}
+[8.931324] (-) TimerEvent: {}
+[9.031749] (-) TimerEvent: {}
+[9.132177] (-) TimerEvent: {}
+[9.232644] (-) TimerEvent: {}
+[9.333130] (-) TimerEvent: {}
+[9.433592] (-) TimerEvent: {}
+[9.534060] (-) TimerEvent: {}
+[9.634524] (-) TimerEvent: {}
+[9.734977] (-) TimerEvent: {}
+[9.835436] (-) TimerEvent: {}
+[9.935916] (-) TimerEvent: {}
+[10.036373] (-) TimerEvent: {}
+[10.136840] (-) TimerEvent: {}
+[10.237326] (-) TimerEvent: {}
+[10.337767] (-) TimerEvent: {}
+[10.438158] (-) TimerEvent: {}
+[10.538555] (-) TimerEvent: {}
+[10.638956] (-) TimerEvent: {}
+[10.739366] (-) TimerEvent: {}
+[10.839771] (-) TimerEvent: {}
+[10.940185] (-) TimerEvent: {}
+[11.040699] (-) TimerEvent: {}
+[11.141341] (-) TimerEvent: {}
+[11.241765] (-) TimerEvent: {}
+[11.342247] (-) TimerEvent: {}
+[11.442659] (-) TimerEvent: {}
+[11.543007] (-) TimerEvent: {}
+[11.643427] (-) TimerEvent: {}
+[11.743858] (-) TimerEvent: {}
+[11.844307] (-) TimerEvent: {}
+[11.944754] (-) TimerEvent: {}
+[12.045236] (-) TimerEvent: {}
+[12.145773] (-) TimerEvent: {}
+[12.246224] (-) TimerEvent: {}
+[12.346776] (-) TimerEvent: {}
+[12.447306] (-) TimerEvent: {}
+[12.547825] (-) TimerEvent: {}
+[12.648419] (-) TimerEvent: {}
+[12.748829] (-) TimerEvent: {}
+[12.849287] (-) TimerEvent: {}
+[12.949688] (-) TimerEvent: {}
+[13.050090] (-) TimerEvent: {}
+[13.150485] (-) TimerEvent: {}
+[13.250928] (-) TimerEvent: {}
+[13.351578] (-) TimerEvent: {}
+[13.451992] (-) TimerEvent: {}
+[13.552412] (-) TimerEvent: {}
+[13.652844] (-) TimerEvent: {}
+[13.753321] (-) TimerEvent: {}
+[13.760953] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable turtle_pub\x1b[0m\n'}
+[13.853432] (-) TimerEvent: {}
+[13.953862] (-) TimerEvent: {}
+[14.054313] (-) TimerEvent: {}
+[14.154744] (-) TimerEvent: {}
+[14.255162] (-) TimerEvent: {}
+[14.355655] (-) TimerEvent: {}
+[14.434201] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'[100%] Built target turtle_pub\n'}
+[14.448747] (cpp_a_follow_turtle_pkg) CommandEnded: {'returncode': 0}
+[14.455821] (-) TimerEvent: {}
+[14.489225] (cpp_a_follow_turtle_pkg) JobProgress: {'identifier': 'cpp_a_follow_turtle_pkg', 'progress': 'install'}
+[14.508634] (cpp_a_follow_turtle_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg'], 'cwd': '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu-ros2'), ('LC_TIME', 'zh_CN.UTF-8'), ('SSH_AGENT_PID', '1800'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/71/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/rolling/opt/yaml_cpp_vendor/lib:/opt/ros/rolling/opt/rviz_ogre_vendor/lib:/opt/ros/rolling/lib/x86_64-linux-gnu:/opt/ros/rolling/lib'), ('QT4_IM_MODULE', 'fcitx'), ('HOME', '/home/ubuntu-ros2'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('TERM_PROGRAM_VERSION', '1.59.0'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL', 'true'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/71/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/71/usr/share/code/code'), ('ROS_IP', '192.168.43.8'), ('MANAGERPID', '1609'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9af7c7c9c460f1aeb0c237416119c8c2'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '22094'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'rolling'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'ubuntu-ros2'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:46694'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'ubuntu-ros2'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/rolling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('SESSION_MANAGER', 'local/ubunturos2-NBLK-WAX9X:@/tmp/.ICE-unix/1874,unix/ubunturos2-NBLK-WAX9X:/tmp/.ICE-unix/1874'), ('INVOCATION_ID', '1a8e9e3ee895474491aed625f5f3ea94'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-fd3d5c4d93.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/snap/code/71/usr/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/rolling'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('DISABLE_WAYLAND', '1'), ('QT_ACCESSIBILITY', '1'), ('NO_AT_BRIDGE', '1'), ('ROS_MASTER_URI', 'http://192.168.43.41:11311'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/build/cpp_a_follow_turtle_pkg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=9af7c7c9c460f1aeb0c237416119c8c2'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/rolling/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('BREAKPAD_DUMP_LOCATION', '/home/ubuntu-ros2/.config/Code/exthost Crash Reports'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/rolling')]), 'shell': False}
+[14.526040] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.526560] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_spawner\n'}
+[14.527288] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_spawner" to ""\n'}
+[14.527627] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_pub\n'}
+[14.532223] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Set runtime path of "/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/lib/cpp_a_follow_turtle_pkg/turtle_pub" to ""\n'}
+[14.532634] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg//launch\n'}
+[14.532859] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg//launch/follow_turtle.launch.py\n'}
+[14.535275] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/package_run_dependencies/cpp_a_follow_turtle_pkg\n'}
+[14.535644] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/parent_prefix_path/cpp_a_follow_turtle_pkg\n'}
+[14.535888] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/ament_prefix_path.sh\n'}
+[14.536106] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/ament_prefix_path.dsv\n'}
+[14.536308] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/path.sh\n'}
+[14.536568] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/environment/path.dsv\n'}
+[14.536776] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.bash\n'}
+[14.537009] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.sh\n'}
+[14.537225] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.zsh\n'}
+[14.537411] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/local_setup.dsv\n'}
+[14.537637] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/package.dsv\n'}
+[14.537933] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/ament_index/resource_index/packages/cpp_a_follow_turtle_pkg\n'}
+[14.538303] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/cmake/cpp_a_follow_turtle_pkgConfig.cmake\n'}
+[14.538690] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/cmake/cpp_a_follow_turtle_pkgConfig-version.cmake\n'}
+[14.539226] (cpp_a_follow_turtle_pkg) StdoutLine: {'line': b'-- Installing: /home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/install/cpp_a_follow_turtle_pkg/share/cpp_a_follow_turtle_pkg/package.xml\n'}
+[14.543453] (cpp_a_follow_turtle_pkg) CommandEnded: {'returncode': 0}
+[14.557628] (-) TimerEvent: {}
+[14.616587] (cpp_a_follow_turtle_pkg) JobEnded: {'identifier': 'cpp_a_follow_turtle_pkg', 'rc': 0}
+[14.617592] (-) EventReactorShutdown: {}

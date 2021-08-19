@@ -6,6 +6,14 @@
         "string_view": "cpp",
         "deque": "cpp",
         "vector": "cpp",
-        "tuple": "cpp"
-    }
+        "tuple": "cpp",
+        "iostream": "cpp"
+    },
+    "ros.distro": "foxy",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ]
 }
