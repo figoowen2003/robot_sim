@@ -1,0 +1,6 @@
+{
+    "ros.distro": "rolling",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/rolling/lib/python3.8/site-packages"
+    ]
+}
