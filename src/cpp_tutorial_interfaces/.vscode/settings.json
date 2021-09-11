@@ -1,0 +1,11 @@
+{
+    "ros.distro": "rolling",
+    "python.autoComplete.extraPaths": [
+        "/home/ubuntu-ros2/robot_sim/install/action_tutorials_interfaces/lib/python3.8/site-packages",
+        "/opt/ros/rolling/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ubuntu-ros2/robot_sim/install/action_tutorials_interfaces/lib/python3.8/site-packages",
+        "/opt/ros/rolling/lib/python3.8/site-packages"
+    ]
+}
