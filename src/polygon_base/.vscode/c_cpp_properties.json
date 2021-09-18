@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/ubuntu-ros2/robot_sim/install/more_interfaces/include/**",
+        "/home/ubuntu-ros2/robot_sim/install/cpp_tutorial_interfaces/include/**",
+        "/home/ubuntu-ros2/robot_sim/install/action_tutorials_interfaces/include/**",
+        "/opt/ros/rolling/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/action_tutorials_cpp/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/action_tutorials_interfaces/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_a_follow_turtle_pkg/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_custom_msgs/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_custom_srv/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_keyboard_pkg/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_parameters_pkg/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_teleop_keyboard_controller_pkg/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_tutorial_interfaces/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_warehouse_robot_controller_pkg/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/cpp_warehouse_robot_spawner_pkg/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/more_interfaces/include/**",
+        "/home/ubuntu-ros2/robot_sim/src/polygon_base/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
